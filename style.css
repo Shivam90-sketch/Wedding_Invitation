@@ -1,0 +1,749 @@
+/* =========================================
+   WEDDING WEBSITE
+   MOBILE FIRST
+========================================= */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #30211f;
+    color: #3b2926;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ---------- MAIN PAGE ---------- */
+
+.wedding-page {
+
+    position: relative;
+
+    min-height: 100svh;
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding:
+        30px
+        24px
+        25px;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(203, 168, 101, 0.10),
+            transparent 35%
+        ),
+        #f7f0e5;
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* ---------- BACKGROUND GLOW ---------- */
+
+.glow {
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.18;
+
+    pointer-events: none;
+}
+
+.glow-one {
+
+    background: #c69a52;
+
+    top: -120px;
+    left: -120px;
+}
+
+.glow-two {
+
+    background: #8e3841;
+
+    bottom: -150px;
+    right: -120px;
+}
+
+
+/* ---------- TOP DECORATION ---------- */
+
+.top-decoration {
+
+    width: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    opacity: 0;
+
+    animation: fadeDown 1s ease forwards;
+}
+
+.top-decoration span:not(.diamond) {
+
+    height: 1px;
+    width: 40px;
+
+    background: #b89555;
+}
+
+.diamond {
+
+    color: #b89555;
+    font-size: 9px;
+}
+
+
+/* ---------- GANESHA ---------- */
+
+.ganesha-section {
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.2s forwards;
+}
+
+
+/* Temporary Ganesha representation */
+
+.ganesha-symbol {
+
+    width: 62px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid rgba(184, 149, 85, 0.55);
+
+    border-radius: 50%;
+
+    color: #9b7439;
+
+    font-family: "Noto Serif Devanagari", serif;
+
+    font-size: 31px;
+
+    position: relative;
+
+    margin-bottom: 15px;
+    paddding-top: 15px;
+}
+
+
+/* Decorative circle */
+
+.ganesha-symbol::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 6px;
+
+    border: 1px solid rgba(184, 149, 85, 0.25);
+
+    border-radius: 50%;
+}
+
+
+.mantra {
+
+    font-family:
+        "Noto Serif Devanagari",
+        serif;
+
+    color: #6d3b3b;
+
+    font-size: 19px;
+
+    letter-spacing: 0.5px;
+}
+
+.mantra-english {
+
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #8d7a6c;
+}
+
+
+/* ---------- COUPLE ---------- */
+
+.couple-section {
+
+    text-align: center;
+
+    margin-top: 38px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.45s forwards;
+}
+
+
+/* Monogram */
+
+.monogram {
+
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.initial {
+
+    width: 80px;
+    height: 80px;
+
+    border: 1px solid #b89555;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 50px;
+
+    font-weight: 500;
+
+    color: #633a36;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    position: relative;
+}
+
+.bride-initial {
+    transform: translateX(18px);
+}
+
+.groom-initial {
+    transform: translateX(-18px);
+}
+
+.heart {
+
+    position: absolute;
+
+    z-index: 3;
+
+    width: 26px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f2e6;
+
+    color: #633a36;
+
+    font-size: 24px;
+
+    animation: heartbeat 2.5s ease-in-out infinite;
+}
+
+
+/* Names */
+
+.names {
+
+    margin-top: 12px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #4b2d2b;
+}
+
+.names span {
+
+    color: #b89555;
+
+    margin:
+        0 5px;
+}
+
+
+.invitation-text {
+
+    margin-top: 13px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #715c52;
+}
+
+.invite-line {
+
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #9a877b;
+}
+
+
+/* ---------- DATE ---------- */
+
+.date-section {
+
+    width: 100%;
+
+    max-width: 340px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.7s forwards;
+}
+
+.small-title {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #9a743c;
+
+    margin-bottom: 8px;
+}
+
+
+.date {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.date > span {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    color: #633a36;
+}
+
+.date div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    border-left: 1px solid #c7ad7c;
+
+    padding-left: 12px;
+}
+
+.date strong {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #5c403b;
+}
+
+.date small {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 16px;
+
+    color: #8d766b;
+}
+
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 13px auto;
+
+    width: 130px;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #c9b282;
+}
+
+.divider span:nth-child(2) {
+
+    color: #b89555;
+
+    font-size: 8px;
+}
+
+
+.wedding-day {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #755e54;
+}
+
+
+/* ---------- ENTER ---------- */
+
+.enter-section {
+
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.95s forwards;
+}
+
+
+.enter-button {
+
+    min-width: 205px;
+
+    padding: 14px 20px;
+
+    border: 1px solid #a98449;
+
+    background: transparent;
+
+    color: #5e403b;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.enter-button:hover {
+
+    background: #6b3d3d;
+
+    color: #fffaf1;
+
+    transform: translateY(-2px);
+}
+
+.enter-button:active {
+
+    transform: scale(0.97);
+}
+
+.arrow {
+
+    font-size: 15px;
+
+    animation:
+        arrowBounce 1.8s ease-in-out infinite;
+}
+
+
+.scroll-text {
+
+    margin-top: 9px;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    color: #a18b7e;
+}
+
+
+/* ---------- BOTTOM DECORATION ---------- */
+
+.bottom-decoration {
+
+    position: absolute;
+
+    bottom: 15px;
+
+    color: #b89555;
+
+    font-size: 9px;
+
+    opacity: 0.7;
+}
+
+
+/* ---------- PAGE EXIT ---------- */
+
+.page-exit {
+
+    opacity: 0;
+
+    transform: scale(1.03);
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+@keyframes arrowBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+
+/* ---------- MOBILE HEIGHT ADJUSTMENTS ---------- */
+
+@media (max-height: 700px) {
+
+    .wedding-page {
+
+        padding-top: 18px;
+    }
+
+    .couple-section {
+
+        margin-top: 20px;
+    }
+
+    .date-section {
+
+        margin-top: 18px;
+    }
+
+    .initial {
+
+        width: 85px;
+        height: 85px;
+
+        font-size: 40px;
+    }
+
+    .monogram {
+
+        height: 80px;
+    }
+
+    .names {
+
+        font-size: 25px;
+    }
+}
+
+
+/* ---------- DESKTOP ---------- */
+
+/*
+   The website is intentionally designed for phones.
+   On larger screens we create a phone-like presentation.
+*/
+
+@media (min-width: 600px) {
+
+    body {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100vh;
+    }
+
+    .wedding-page {
+
+        width: 390px;
+
+        max-width: 390px;
+
+        min-height: 844px;
+
+        max-height: 100vh;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 30px 80px
+            rgba(0, 0, 0, 0.35);
+    }
+}

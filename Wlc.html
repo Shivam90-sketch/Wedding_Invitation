@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Our Wedding</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="wedding-page">
+<! --- Audio --- >
+	<audio id="weddingMusic" loop preload="auto">
+		    <source src="Flute Ringtone.mp3" type="audio/mpeg">
+	</audio>
+
+    <!-- Decorative background -->
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <!-- Top decorative element -->
+    <div class="top-decoration">
+        <span></span>
+        <span class="diamond">◆</span>
+        <span></span>
+    </div>
+
+    <!-- Ganesha -->
+    <section class="ganesha-section">
+
+        <!-- Temporary text symbol.
+             Replace this with your actual Ganesha SVG/image later. -->
+        <div class="ganesha-symbol">
+            ॐ
+        </div>
+
+        <div class="mantra">
+            ॐ गं गणपतये नमः
+        </div>
+
+        <p class="mantra-english">
+            Om Gam Ganapataye Namah
+        </p>
+
+    </section>
+
+
+    <!-- Couple Monogram -->
+    <section class="couple-section">
+
+        <div class="monogram">
+
+            <span class="initial bride-initial">A</span>
+
+            <span class="heart">♡</span>
+
+            <span class="initial groom-initial">R</span>
+
+        </div>
+
+        <div class="names">
+            Shraddha  Shukla <span>&</span> Rohit Mishra
+        </div>
+
+        <p class="invitation-text">
+            Together with their families
+        </p>
+
+        <p class="invite-line">
+            request the pleasure of your presence
+        </p>
+
+    </section>
+
+
+    <!-- Wedding date -->
+    <section class="date-section">
+
+        <p class="small-title">
+            SAVE THE DATE
+        </p>
+
+        <div class="date">
+            <span>2</span>
+
+            <div>
+                <strong>DECEMBER</strong>
+                <small>2026</small>
+            </div>
+        </div>
+
+        <div class="divider">
+            <span></span>
+            <span>✦</span>
+            <span></span>
+        </div>
+
+        <p class="wedding-day">
+            Wednesday • 7:00 PM
+        </p>
+
+    </section>
+
+
+    <!-- Enter button -->
+    <section class="enter-section">
+
+        <button
+            type="button"
+            class="enter-button"
+            onclick="enterInvitation()">
+
+            <span>
+                ENTER INVITATION
+            </span>
+
+            <span class="arrow">
+                ↓
+            </span>
+
+        </button>
+
+        <p class="scroll-text">
+            Tap to begin our journey
+        </p>
+
+    </section>
+
+
+    <!-- Bottom decoration -->
+    <div class="bottom-decoration">
+        ✦
+    </div>
+
+</main>
+
+
+<!-- =========================================
+     PAGE NAVIGATION
+========================================= -->
+
+<script>
+
+    function enterInvitation() {
+
+        // Add the existing exit animation
+        document
+            .querySelector(".wedding-page")
+            .classList.add("page-exit");
+
+
+        // Wait for the animation, then open welcome.html
+        setTimeout(function () {
+
+            window.location.href = "welcome.html";
+
+        }, 700);
+
+    }
+
+
+	// Wedding Background Music on Scroll
+
+const weddingMusic = document.getElementById("weddingMusic");
+const musicButton = document.getElementById("musicButton");
+
+let musicStarted = false;
+
+window.addEventListener("scroll", function startMusicOnScroll() {
+
+    if (!musicStarted) {
+
+        weddingMusic.play()
+            .then(() => {
+                musicStarted = true;
+                musicButton.classList.add("playing");
+                musicButton.innerHTML = "♫";
+            })
+            .catch(error => {
+                console.log("Music playback blocked:", error);
+            });
+
+    }
+
+}, { once: true });
+
+
+// Music ON/OFF button
+
+musicButton.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+
+    if (weddingMusic.paused) {
+
+        weddingMusic.play();
+        musicButton.classList.add("playing");
+        musicButton.innerHTML = "♫";
+
+    } else {
+
+        weddingMusic.pause();
+        musicButton.classList.remove("playing");
+        musicButton.innerHTML = "♪";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1640 @@
+
+```css
+/* =========================================
+   PREMIUM WEDDING INVITATION
+   MOBILE FIRST
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background: #30211f;
+    color: #3b2926;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.invitation-page {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #f7f0e5;
+}
+
+
+/* =========================================
+   AMBIENT BACKGROUND
+========================================= */
+
+.background-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    opacity: 0.18;
+    z-index: 0;
+}
+
+.glow-one {
+    top: 100px;
+    left: -190px;
+    background: #d0a65d;
+    animation: floatingGlow 9s ease-in-out infinite;
+}
+
+.glow-two {
+    top: 1200px;
+    right: -190px;
+    background: #8b4149;
+    animation: floatingGlow 11s ease-in-out infinite reverse;
+}
+
+
+/* =========================================
+   SUBTLE PAPER TEXTURE
+========================================= */
+
+.invitation-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            rgba(120, 90, 65, 0.055) 0.7px,
+            transparent 0.7px
+        );
+
+    background-size: 7px 7px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+section {
+    position: relative;
+    z-index: 2;
+}
+
+.section-label {
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #9a743c;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+    min-height: 100svh;
+
+    padding:
+        38px
+        25px
+        30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   GOLD PARTICLES
+========================================= */
+
+.hero-section::before,
+.hero-section::after {
+    content: "✦";
+    position: absolute;
+
+    color: #b89555;
+    opacity: 0.35;
+
+    font-size: 10px;
+
+    animation:
+        particleFloat 5s ease-in-out infinite;
+}
+
+.hero-section::before {
+    top: 20%;
+    left: 13%;
+}
+
+.hero-section::after {
+    top: 35%;
+    right: 12%;
+
+    animation-delay: 2s;
+}
+
+
+/* =========================================
+   TOP DECORATION
+========================================= */
+
+.top-decoration {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 35px;
+
+    opacity: 0;
+
+    animation:
+        fadeDown 1s ease forwards;
+}
+
+.top-decoration span {
+    width: 45px;
+    height: 1px;
+    background: #b89555;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.top-decoration span::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: #f1dca9;
+
+    animation:
+        lineShimmer 2.5s ease-in-out 1s forwards;
+}
+
+.top-decoration div {
+    font-size: 8px;
+    color: #b89555;
+
+    animation:
+        rotateDiamond 5s linear infinite;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.hero-section .eyebrow {
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #9a743c;
+
+    margin-bottom: 25px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.25s forwards;
+}
+
+
+/* =========================================
+   MAIN NAMES
+========================================= */
+
+.hero-section h1 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 60px;
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    color: #4b2d2b;
+
+    opacity: 0;
+
+    animation:
+        heroNames 1.2s cubic-bezier(.2,.8,.2,1) 0.35s forwards;
+}
+
+.hero-section h1 span {
+    display: block;
+
+    font-size: 27px;
+
+    color: #b89555;
+
+    margin: 8px 0;
+
+    animation:
+        heartbeat 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   HERO FLOWER
+========================================= */
+
+.hero-flower {
+    margin-top: 27px;
+
+    color: #b89555;
+
+    font-size: 11px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.65s forwards,
+        gentleRotate 7s linear 1.6s infinite;
+}
+
+
+/* =========================================
+   HERO MESSAGE
+========================================= */
+
+.hero-message {
+    max-width: 280px;
+
+    margin-top: 20px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+
+    font-style: italic;
+
+    color: #715c52;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.75s forwards;
+}
+
+
+/* =========================================
+   HERO DATE
+========================================= */
+
+.hero-date {
+    margin-top: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.9s forwards;
+}
+
+.hero-date > span {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 58px;
+
+    color: #633a36;
+
+    line-height: 1;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.hero-date:hover > span {
+    transform: scale(1.08);
+}
+
+.hero-date div {
+    padding-left: 13px;
+
+    border-left: 1px solid #c8ae7c;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.hero-date strong {
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: #5c403b;
+}
+
+.hero-date small {
+    margin-top: 2px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    color: #8d766b;
+}
+
+
+.hero-day {
+    margin-top: 13px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #89736a;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 1s forwards;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #9b8579;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 1.2s forwards;
+}
+
+.scroll-indicator span {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+.scroll-indicator b {
+    font-size: 15px;
+
+    font-weight: 400;
+
+    color: #b89555;
+
+    animation:
+        bounce 1.8s infinite;
+}
+
+
+/* =========================================
+   SECTION REVEAL
+========================================= */
+
+.personal-section,
+.couple-section,
+.date-card-section,
+.events-section,
+.venue-section,
+.final-section {
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* =========================================
+   PERSONAL SECTION
+========================================= */
+
+.personal-section {
+    padding:
+        100px
+        30px;
+
+    text-align: center;
+
+    background: #f3eadc;
+
+    overflow: hidden;
+}
+
+
+/* Decorative ring */
+
+.personal-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border:
+        1px solid
+        rgba(184,149,85,0.18);
+
+    border-radius: 50%;
+
+    top: -90px;
+    right: -80px;
+
+    animation:
+        slowSpin 18s linear infinite;
+}
+
+
+.personal-section h2 {
+    margin-top: 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    color: #4b2d2b;
+}
+
+.personal-section h2 span {
+    color: #8e4a4d;
+}
+
+.small-flower {
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    color: #b89555;
+
+    animation:
+        heartbeat 3s ease-in-out infinite;
+}
+
+.personal-message {
+    max-width: 300px;
+
+    margin: 25px auto 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: #715c52;
+}
+
+.signature {
+    margin-top: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    color: #8a746a;
+}
+
+.signature strong {
+    font-size: 22px;
+
+    font-weight: 500;
+
+    color: #633a36;
+}
+
+
+/* =========================================
+   COUPLE
+========================================= */
+
+.couple-section {
+    padding:
+        100px
+        25px;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.couple-section h2 {
+    margin-top: 20px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 37px;
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    color: #4b2d2b;
+}
+
+
+/* Couple cards */
+
+.couple-cards {
+    margin-top: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.person-card {
+    width: 125px;
+
+    transition:
+        transform 0.6s cubic-bezier(.2,.8,.2,1);
+}
+
+.person-card:hover {
+    transform:
+        translateY(-8px);
+}
+
+
+/* =========================================
+   PHOTO PLACEHOLDER
+========================================= */
+
+.photo-placeholder {
+    width: 115px;
+    height: 145px;
+
+    margin: auto;
+
+    border-radius:
+        60px 60px 15px 15px;
+
+    border:
+        1px solid
+        #b89555;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eadcc8,
+            #d9c6aa
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 55px;
+
+    color:
+        rgba(99,58,54,0.35);
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(92,61,47,0.10);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Gold light sweep */
+
+.photo-placeholder::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.45),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    animation:
+        photoShimmer 5s ease-in-out infinite;
+}
+
+
+.person-role {
+    margin-top: 15px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #a17b42;
+}
+
+.person-card h3 {
+    margin-top: 4px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    color: #633a36;
+}
+
+
+/* Heart */
+
+.between-heart {
+    margin: 0 -5px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #f7f0e5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #934b50;
+
+    font-size: 24px;
+
+    z-index: 2;
+
+    animation:
+        heartbeat 2.8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   DATE CARD
+========================================= */
+
+.date-card-section {
+    padding:
+        30px
+        25px
+        100px;
+}
+
+.date-card {
+    padding:
+        55px
+        20px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(184,149,85,0.5);
+
+    background:
+        rgba(255,255,255,0.18);
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px
+        rgba(87,56,42,0.08);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.date-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border:
+        1px solid
+        rgba(184,149,85,0.18);
+
+    border-radius: 50%;
+
+    top: -100px;
+    left: -70px;
+}
+
+
+.date-card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 28px 70px
+        rgba(87,56,42,0.13);
+}
+
+
+.large-date {
+    margin-top: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+.large-date > span {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 72px;
+
+    line-height: 1;
+
+    color: #633a36;
+}
+
+.large-date div {
+    padding-left: 14px;
+
+    border-left:
+        1px solid
+        #c8ae7c;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.large-date strong {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color: #5c403b;
+}
+
+.large-date small {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    color: #8d766b;
+}
+
+.date-divider {
+    margin: 20px 0;
+
+    color: #b89555;
+
+    font-size: 9px;
+
+    animation:
+        heartbeat 3s ease-in-out infinite;
+}
+
+.date-day {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #633a36;
+}
+
+.date-time {
+    margin-top: 7px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #9a857a;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.events-section {
+    padding:
+        100px
+        25px;
+
+    background: #f3eadc;
+
+    text-align: center;
+}
+
+.events-section h2 {
+    margin-top: 20px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 37px;
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    color: #4b2d2b;
+}
+
+
+/* Event cards */
+
+.event-card {
+    margin-top: 35px;
+
+    padding:
+        25px
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid
+        rgba(184,149,85,0.35);
+
+    transition:
+        transform 0.5s ease,
+        background 0.5s ease;
+}
+
+.event-card:hover {
+    transform:
+        translateX(5px);
+
+    background:
+        rgba(255,255,255,0.25);
+}
+
+
+.event-icon {
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+
+    border:
+        1px solid
+        #c4a96d;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #a17b42;
+
+    font-size: 22px;
+
+    transition:
+        transform 0.5s ease,
+        background 0.5s ease;
+}
+
+
+.event-card:hover .event-icon {
+    transform:
+        rotate(10deg)
+        scale(1.08);
+
+    background:
+        rgba(184,149,85,0.08);
+}
+
+
+.event-content {
+    flex: 1;
+}
+
+.event-number {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #b89555;
+}
+
+.event-content h3 {
+    margin-top: 3px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    color: #633a36;
+}
+
+.event-date {
+    margin-top: 3px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+    color: #8a746a;
+}
+
+.event-time {
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    color: #633a36;
+}
+
+.event-location {
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    color: #9a857a;
+}
+
+.featured-event {
+    border:
+        1px solid
+        rgba(184,149,85,0.5);
+
+    background:
+        rgba(255,255,255,0.22);
+
+    position: relative;
+}
+
+
+/* =========================================
+   VENUE
+========================================= */
+
+.venue-section {
+    padding:
+        110px
+        25px;
+
+    text-align: center;
+}
+
+.venue-illustration {
+    margin:
+        25px auto;
+
+    width: 100px;
+    height: 100px;
+
+    border:
+        1px solid
+        #b89555;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 50px;
+
+    color: #8e4a4d;
+
+    position: relative;
+
+    animation:
+        venuePulse 4s ease-in-out infinite;
+}
+
+
+.venue-illustration::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -9px;
+
+    border:
+        1px solid
+        rgba(184,149,85,0.22);
+
+    border-radius: 50%;
+
+    animation:
+        slowSpin 14s linear infinite;
+}
+
+
+.venue-section h2 {
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    color: #4b2d2b;
+}
+
+.venue-address {
+    margin-top: 12px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    color: #806c63;
+}
+
+
+.map-button {
+    margin-top: 28px;
+
+    padding:
+        14px
+        22px;
+
+    background: transparent;
+
+    color: #5e403b;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+.map-button:hover {
+    background: #6b3d3d;
+
+    color: #fffaf1;
+
+    transform:
+        translateY(-3px);
+}
+
+.map-button span {
+    margin-left: 8px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FINAL SECTION
+========================================= */
+
+.final-section {
+    min-height: 80svh;
+
+    padding:
+        100px
+        25px;
+
+    background: #6b3d3d;
+
+    color: #f7f0e5;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* Gold floating glow */
+
+.final-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(214,183,123,0.08);
+
+    filter: blur(50px);
+
+    animation:
+        floatingGlow 7s ease-in-out infinite;
+}
+
+
+.final-symbol {
+    font-family:
+        "Noto Serif Devanagari",
+        serif;
+
+    font-size: 34px;
+
+    color: #d5b77b;
+
+    animation:
+        heartbeat 3s ease-in-out infinite;
+}
+
+.final-section .section-label {
+    margin-top: 25px;
+
+    color: #d5b77b;
+}
+
+.final-section h2 {
+    margin-top: 25px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 39px;
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    opacity: 0;
+
+    animation:
+        finalReveal 1.2s ease forwards;
+}
+
+.final-names {
+    margin-top: 30px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+    color: #e8d5ad;
+}
+
+.final-divider {
+    margin-top: 25px;
+
+    color: #d5b77b;
+
+    font-size: 9px;
+
+    animation:
+        gentleRotate 8s linear infinite;
+}
+
+.final-date {
+    margin-top: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #d6c3a5;
+}
+
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+
+
+/* Fade upward */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* Fade downward */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* Hero names */
+
+@keyframes heroNames {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(35px)
+            scale(0.95);
+        letter-spacing: 8px;
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+        letter-spacing: normal;
+    }
+
+}
+
+
+/* Heart */
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.12);
+    }
+
+}
+
+
+/* Arrow */
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(6px);
+    }
+
+}
+
+
+/* Glow movement */
+
+@keyframes floatingGlow {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(35px,25px)
+            scale(1.15);
+    }
+
+}
+
+
+/* Gold line */
+
+@keyframes lineShimmer {
+
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
+
+
+/* Diamond */
+
+@keyframes rotateDiamond {
+
+    0% {
+        transform:
+            rotate(0deg);
+    }
+
+    100% {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* Flower */
+
+@keyframes gentleRotate {
+
+    0% {
+        transform:
+            rotate(0deg);
+    }
+
+    100% {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* Particle */
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0.25;
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(20deg);
+
+        opacity: 0.65;
+    }
+
+}
+
+
+/* Photo shimmer */
+
+@keyframes photoShimmer {
+
+    0% {
+        left: -120%;
+    }
+
+    35%,
+    100% {
+        left: 150%;
+    }
+
+}
+
+
+/* Slow circle */
+
+@keyframes slowSpin {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* Venue */
+
+@keyframes venuePulse {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.04);
+    }
+
+}
+
+
+/* Final */
+
+@keyframes finalReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP PREVIEW
+========================================= */
+
+@media (min-width: 600px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .invitation-page {
+        width: 390px;
+        max-width: 390px;
+
+        box-shadow:
+            0 30px 80px
+            rgba(0,0,0,0.35);
+    }
+
+}
+```

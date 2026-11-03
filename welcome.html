@@ -1,0 +1,327 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Shraddha & Rohit | Welcome</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Welcome Page CSS -->
+
+    <link rel="stylesheet" href="welcome.css">
+    <script src="music-player.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================
+         WELCOME PAGE
+    =================================== -->
+
+    <main class="welcome-page">
+
+
+        <!-- Background decoration -->
+
+        <div class="background-glow glow-top"></div>
+
+        <div class="background-glow glow-bottom"></div>
+
+
+        <!-- Decorative top element -->
+
+        <div class="top-decoration">
+
+            <span></span>
+
+            <div class="diamond">
+                ◆
+            </div>
+
+            <span></span>
+
+        </div>
+	
+	<audio id="weddingMusic" loop preload="auto">
+		    <source src="Flute Ringtone.mp3" type="audio/mpeg">
+	</audio>
+
+        <!-- Main content -->
+
+        <section class="welcome-content">
+
+
+            <!-- Small heading -->
+
+            <p class="eyebrow">
+                WITH LOVE
+            </p>
+
+
+            <!-- Floral / decorative circle -->
+
+            <div class="welcome-emblem">
+
+                <div class="emblem-inner">
+
+                    <span>
+                        ♡
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Welcome -->
+
+            <h1>
+                Welcome <span id="guestName">Guest</span>,
+            </h1>
+
+
+            <div class="gold-line">
+                ✦
+            </div>
+
+
+            <!-- Personalized message -->
+
+            <p class="welcome-message">
+			Shehnaaiyon ki goonj hai, khushiyon ka paigaam hai, nav-yugal ke jeevan ki yeh ek nayi shaam hai. Is harshollas ke utsav 			mein aap saadar aamantrit hain, aapka aagaman hi humare liye sabse bada sammaan hai
+            </p>
+
+
+            <!-- Couple names -->
+
+            <div class="couple-names">
+
+                <span>
+                    Shraddha
+                </span>
+
+                <small>
+                    &
+                </small>
+
+                <span>
+                    Rohit
+                </span>
+
+            </div>
+
+
+            <!-- Date -->
+
+            <div class="wedding-info">
+
+                <span>
+                    2 DECEMBER 2026
+                </span>
+
+                <i></i>
+
+                <span>
+                    Wednesday 
+                </span>
+
+            </div>
+
+	<div class="card original">
+
+		  <div class="title"> ꧁ ༺ Darshnabhilashi ༻ ꧂</div> </br>
+		  <div class="content" style="text-wrap: auto;">
+			     Atul Shukla,  Deepak Shukla,  </br>
+                             Ravi Shukla,  Amit (Tinkoo) Shukla,  </br>
+                             Satyam Shukla,  Shubham Shukla,  </br>
+                             Vipul Shukla,  Shivam Shukla,  </br>
+                             Sumit Shukla,  Om Shukla . 
+		   <br>
+		
+		  </div>
+	</div>
+
+	<div class="card new">
+
+		  <div class="title"> ꧁ ༺ Swagatakankshi ༻ ꧂</div>
+		  <div class="content">
+			    Shri Ajar Bihari Shukla </br>
+                            Shri Dayaram Shukla 
+		    <br> 
+		  </div>
+	</div>
+
+	<div class="card new">
+
+		  <div class="title"> ꧁ ༺ Vineet ༻ ꧂</div>
+		  <div class="content">
+			    Shri Ramanuj Shukla </br>
+		    <br> 
+		  </div>
+	</div>
+
+
+
+            <!-- Continue button -->
+
+            <button
+                class="continue-button"
+                id="continueButton"
+                type="button"
+            >
+
+                <span>
+                    CONTINUE
+                </span>
+
+                <b>
+                    ↓
+                </b>
+
+            </button>
+
+
+            <p class="continue-text">
+                Our story begins here
+            </p>
+
+
+        </section>
+
+
+        <!-- Bottom decoration -->
+
+        <div class="bottom-decoration">
+
+            <span></span>
+
+            <div>✦</div>
+
+            <span></span>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ==================================
+         JAVASCRIPT
+    =================================== -->
+
+    <script>
+
+        const continueButton =
+            document.getElementById("continueButton");
+
+
+        continueButton.addEventListener(
+            "click",
+            function () {
+
+                /*
+                 * When the guest clicks Continue,
+                 * we'll move to the next page.
+                 *
+                 * For now this goes to invitation.html.
+                 */
+
+                window.location.href =
+                    "invitation.html";
+
+            }
+        );
+
+        const guestName =
+            localStorage.getItem("guestName");
+
+
+        if (guestName) {
+
+            document.getElementById("guestName")
+                .textContent = guestName;
+
+        }
+
+
+
+		// Wedding Background Music on Scroll
+
+const weddingMusic = document.getElementById("weddingMusic");
+const musicButton = document.getElementById("musicButton");
+
+let musicStarted = false;
+
+window.addEventListener("scroll", function startMusicOnScroll() {
+
+    if (!musicStarted) {
+
+        weddingMusic.play()
+            .then(() => {
+                musicStarted = true;
+                musicButton.classList.add("playing");
+                musicButton.innerHTML = "♫";
+            })
+            .catch(error => {
+                console.log("Music playback blocked:", error);
+            });
+
+    }
+
+}, { once: true });
+
+
+// Music ON/OFF button
+
+musicButton.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+
+    if (weddingMusic.paused) {
+
+        weddingMusic.play();
+        musicButton.classList.add("playing");
+        musicButton.innerHTML = "♫";
+
+    } else {
+
+        weddingMusic.pause();
+        musicButton.classList.remove("playing");
+        musicButton.innerHTML = "♪";
+
+    }
+
+});
+
+    </script>
+
+
+</body>
+
+</html>
+```

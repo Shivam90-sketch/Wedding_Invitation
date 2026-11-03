@@ -1,0 +1,2131 @@
+/* =========================================
+   JAIPUR ROYAL WEDDING DOOR
+   MOBILE FIRST
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+
+body {
+
+    background:
+        #24151e;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    color:
+        #fff4df;
+
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.jaipur-page {
+
+    position: relative;
+
+    width: 100%;
+    height: 100svh;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 35%,
+            #d66f61 0%,
+            #a84255 28%,
+            #54233c 58%,
+            #24151e 100%
+        );
+
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.background-glow {
+
+    position: absolute;
+
+    width: 100vw;
+    height: 100vw;
+
+    max-width: 500px;
+    max-height: 500px;
+
+    top: 25%;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,190,111,0.35),
+            rgba(245,121,103,0.12) 40%,
+            transparent 70%
+        );
+
+    filter:
+        blur(25px);
+
+    animation:
+        backgroundPulse 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================
+   SUBTLE JAALI BACKGROUND
+========================================= */
+
+.background-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.08;
+
+    background-image:
+
+        radial-gradient(
+            circle at center,
+            #ffd997 1px,
+            transparent 1px
+        );
+
+    background-size:
+        18px 18px;
+
+}
+
+
+/* =========================================
+   FLOATING DECORATION
+========================================= */
+
+.floating {
+
+    position: absolute;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+}
+
+
+.flower {
+
+    color:
+        #f7c27d;
+
+    font-size:
+        13px;
+
+    opacity:
+        0.5;
+
+}
+
+
+.flower-1 {
+
+    top: 18%;
+    left: 10%;
+
+    animation:
+        float 5s ease-in-out infinite;
+
+}
+
+
+.flower-2 {
+
+    right: 10%;
+    top: 30%;
+
+    animation:
+        float 6s ease-in-out 1s infinite;
+
+}
+
+
+.star {
+
+    color:
+        #f9dfaa;
+
+    opacity:
+        0.6;
+
+}
+
+
+.star-1 {
+
+    left: 14%;
+    top: 45%;
+
+    animation:
+        float 4s ease-in-out infinite;
+
+}
+
+
+.star-2 {
+
+    right: 14%;
+    top: 55%;
+
+    animation:
+        float 5s ease-in-out 1s infinite;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.royal-header {
+
+    position: absolute;
+
+    top: 4%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 82%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    z-index: 20;
+
+    animation:
+        revealDown 1s ease both;
+
+}
+
+
+.header-line {
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,218,156,0.7)
+        );
+
+}
+
+
+.header-line:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,218,156,0.7),
+            transparent
+        );
+
+}
+
+
+.header-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        #ffe0a6;
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.header-symbol {
+
+    color:
+        #f3ad67;
+
+}
+
+
+/* =========================================
+   PALACE
+========================================= */
+
+.jaipur-palace {
+
+    position: absolute;
+
+    width: 94%;
+
+    max-width: 390px;
+
+    height: 70%;
+
+    min-height: 430px;
+
+    left: 50%;
+    top: 49%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+/* =========================================
+   PALACE TOWERS
+========================================= */
+
+.palace-tower {
+
+    position: absolute;
+
+    width: 20%;
+
+    height: 82%;
+
+    bottom: 2%;
+
+    z-index: 3;
+
+}
+
+
+.tower-left {
+
+    left: 0;
+
+}
+
+
+.tower-right {
+
+    right: 0;
+
+}
+
+
+/* =========================================
+   TOWER DOME
+========================================= */
+
+.tower-dome {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 85%;
+    height: 22%;
+
+    border-radius:
+        50% 50% 15% 15%;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            #ffd493,
+            #d88a62 30%,
+            #a34f53 70%,
+            #73384c
+        );
+
+    border:
+        1px solid
+        rgba(255,222,166,0.65);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,0.25);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color:
+        #ffe3aa;
+
+}
+
+
+.tower-dome::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+
+    height: 70%;
+
+    border:
+        1px solid
+        rgba(255,224,168,0.5);
+
+    border-radius:
+        50% 50% 0 0;
+
+}
+
+
+.tower-dome span {
+
+    font-size:
+        7px;
+
+    margin-top:
+        -12px;
+
+}
+
+
+/* =========================================
+   TOWER BODY
+========================================= */
+
+.tower-body {
+
+    position: absolute;
+
+    top: 16%;
+
+    left: 8%;
+    right: 8%;
+
+    bottom: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #b85f5a,
+            #d78369,
+            #b95759
+        );
+
+    border:
+        1px solid
+        rgba(255,215,160,0.45);
+
+}
+
+
+/* =========================================
+   JHAROKHA
+========================================= */
+
+.jharokha {
+
+    position: absolute;
+
+    top: 20%;
+
+    left: 20%;
+
+    width: 60%;
+
+    height: 27%;
+
+}
+
+
+.jharokha-arch {
+
+    position: absolute;
+
+    inset: 0;
+
+    border:
+        2px solid
+        #f1bc77;
+
+    border-bottom:
+        none;
+
+    border-radius:
+        50% 50% 0 0;
+
+}
+
+
+.jharokha-window {
+
+    position: absolute;
+
+    left: 15%;
+    right: 15%;
+
+    top: 25%;
+    bottom: 0;
+
+    background:
+        #43223a;
+
+    border:
+        1px solid
+        rgba(255,207,139,0.5);
+
+}
+
+
+.jharokha-window::after {
+
+    content:
+        "✦";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color:
+        #eeb56f;
+
+    font-size:
+        7px;
+
+}
+
+
+/* =========================================
+   TOWER DECORATION
+========================================= */
+
+.tower-decoration {
+
+    position: absolute;
+
+    bottom: 10%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        #f6c47c;
+
+    font-size:
+        12px;
+
+}
+
+
+/* =========================================
+   ROYAL ARCH
+========================================= */
+
+.royal-arch {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 2%;
+
+    transform:
+        translateX(-50%);
+
+    width: 76%;
+
+    height: 92%;
+
+    border-radius:
+        50% 50% 0 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #c2675d,
+            #ed9b77 25%,
+            #dc7969 50%,
+            #ed9b77 75%,
+            #b65657
+        );
+
+    border:
+        2px solid
+        #f5c47e;
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(31,11,25,0.45);
+
+}
+
+
+/* =========================================
+   ARCH DECORATION
+========================================= */
+
+.arch-decoration {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50% 50% 0 0;
+
+    border-style:
+        solid;
+
+    border-bottom:
+        none;
+
+}
+
+
+.arch-decoration-one {
+
+    width: 94%;
+    height: 97%;
+
+    top: 1%;
+
+    border-width:
+        5px;
+
+    border-color:
+        #8c4650;
+
+}
+
+
+.arch-decoration-two {
+
+    width: 87%;
+    height: 95%;
+
+    top: 3%;
+
+    border-width:
+        2px;
+
+    border-color:
+        #ffe0a0;
+
+}
+
+
+/* =========================================
+   FLORAL ARCH TOP
+========================================= */
+
+.arch-floral {
+
+    position: absolute;
+
+    top: -5%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+
+    color:
+        #ffe0a2;
+
+    font-size:
+        12px;
+
+    z-index: 20;
+
+}
+
+
+.arch-floral span:nth-child(2) {
+
+    font-size:
+        20px;
+
+    color:
+        #f6b36c;
+
+}
+
+
+/* =========================================
+   PEACOCKS
+========================================= */
+
+.peacock {
+
+    position: absolute;
+
+    top: 12%;
+
+    z-index: 20;
+
+    font-size:
+        20px;
+
+    filter:
+        drop-shadow(
+            0 2px 2px
+            rgba(0,0,0,0.25)
+        );
+
+    animation:
+        peacockFloat 4s ease-in-out infinite;
+
+}
+
+
+.peacock-left {
+
+    left: -10px;
+
+}
+
+
+.peacock-right {
+
+    right: -10px;
+
+    transform:
+        scaleX(-1);
+
+}
+
+
+/* =========================================
+   DOORWAY
+========================================= */
+
+.doorway {
+
+    position: absolute;
+
+    left: 12%;
+    right: 12%;
+
+    top: 6%;
+    bottom: 0;
+
+    overflow: hidden;
+
+    border-radius:
+        46% 46% 0 0;
+
+    background:
+        #321a2b;
+
+}
+
+
+/* =========================================
+   LIGHT BEHIND DOORS
+========================================= */
+
+.door-light {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+
+        radial-gradient(
+            ellipse at center 48%,
+            #ffe7a7 0%,
+            #f4ad61 20%,
+            #c35f5a 45%,
+            #47253b 100%
+        );
+
+}
+
+
+.light-rays {
+
+    position: absolute;
+
+    inset: -50%;
+
+    background:
+
+        repeating-conic-gradient(
+            rgba(255,231,171,0.08) 0deg 8deg,
+            transparent 8deg 18deg
+        );
+
+    animation:
+        rays 25s linear infinite;
+
+}
+
+
+.light-center {
+
+    position: absolute;
+
+    top: 45%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color:
+        #fff1bf;
+
+    font-size:
+        28px;
+
+    text-shadow:
+        0 0 30px
+        #ffe5a0;
+
+    animation:
+        glow 2.5s ease-in-out infinite;
+
+}
+
+
+/* =========================================
+   JAIPUR DOORS
+========================================= */
+
+.jaipur-door {
+
+    position: absolute;
+
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    z-index: 10;
+
+    transition:
+        transform 1.8s
+        cubic-bezier(.76,0,.24,1);
+
+}
+
+
+.door-left {
+
+    left: 0;
+
+    transform-origin:
+        left center;
+
+}
+
+
+.door-right {
+
+    right: 0;
+
+    transform-origin:
+        right center;
+
+}
+
+
+/* =========================================
+   DOOR SURFACE
+========================================= */
+
+.door-surface {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #197d82,
+            #12636f 35%,
+            #0f4d5d 70%,
+            #093e4e
+        );
+
+    border:
+        2px solid
+        #e9b76d;
+
+    box-shadow:
+
+        inset 0 0 30px
+        rgba(0,0,0,0.3);
+
+}
+
+
+/* =========================================
+   DOOR GOLD BORDER
+========================================= */
+
+.door-border {
+
+    position: absolute;
+
+    inset: 9px;
+
+    border:
+        1px solid
+        #f6ca83;
+
+    box-shadow:
+
+        inset 0 0 0 2px
+        rgba(240,183,105,0.25);
+
+}
+
+
+/* =========================================
+   DOOR TOP CARVING
+========================================= */
+
+.door-carving {
+
+    position: absolute;
+
+    color:
+        #f3c47c;
+
+    text-align:
+        center;
+
+}
+
+
+.carving-top {
+
+    top: 7%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================
+   COUPLE MONOGRAM
+========================================= */
+
+.carving-center {
+
+    top: 42%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+}
+
+
+.carving-center span {
+
+    font-size:
+        31px;
+
+    line-height:
+        0.75;
+
+}
+
+
+.carving-center small {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size:
+        8px;
+
+    margin:
+        6px 0;
+
+    color:
+        #f4d49c;
+
+}
+
+
+/* =========================================
+   FLORAL DOOR ART
+========================================= */
+
+.door-floral {
+
+    position: absolute;
+
+    bottom: 11%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        #f6c77f;
+
+    font-size:
+        17px;
+
+}
+
+
+/* =========================================
+   DECORATIVE DOOR PANEL
+========================================= */
+
+.door-panel {
+
+    position: absolute;
+
+    left: 15%;
+
+    right: 15%;
+
+    top: 23%;
+
+    height: 25%;
+
+    border:
+        1px solid
+        rgba(245,202,132,0.5);
+
+    border-radius:
+        50% 50% 0 0;
+
+}
+
+
+/* =========================================
+   OPEN BUTTON
+========================================= */
+
+.open-door-button {
+
+    position: absolute;
+
+    z-index: 30;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 105px;
+    height: 105px;
+
+    border-radius:
+        50%;
+
+    border:
+        1px solid
+        #f2ca85;
+
+    background:
+        rgba(44,24,39,0.88);
+
+    color:
+        #ffe2ac;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+
+        0 0 0 6px
+        rgba(242,202,133,0.1),
+
+        0 0 30px
+        rgba(0,0,0,0.35);
+
+    transition:
+        opacity 0.4s,
+        transform 0.5s;
+
+}
+
+
+.open-door-button:active {
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.94);
+
+}
+
+
+.button-symbol {
+
+    font-size:
+        21px;
+
+    animation:
+        heartPulse 2s ease-in-out infinite;
+
+}
+
+
+.button-main {
+
+    margin-top:
+        6px;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.button-sub {
+
+    margin-top:
+        4px;
+
+    font-size:
+        5px;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #c7a87a;
+
+}
+
+
+.button-hidden {
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.6);
+
+}
+
+
+/* =========================================
+   DOOR OPENING
+========================================= */
+
+.doors-open .door-left {
+
+    transform:
+        rotateY(-110deg);
+
+}
+
+
+.doors-open .door-right {
+
+    transform:
+        rotateY(110deg);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.royal-footer {
+
+    position: absolute;
+
+    bottom: 2.5%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 100%;
+
+    text-align:
+        center;
+
+    z-index: 20;
+
+}
+
+
+.footer-motif {
+
+    color:
+        #f2b96f;
+
+    font-size:
+        8px;
+
+}
+
+
+.royal-footer p {
+
+    margin-top:
+        4px;
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #f7d8a1;
+
+}
+
+
+.royal-footer small {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        10px;
+
+    color:
+        #e7b976;
+
+}
+
+
+/* =========================================
+   GUEST SCREEN
+========================================= */
+
+.guest-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        25px;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #a84c62,
+            #54253e 45%,
+            #251522 100%
+        );
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        scale(1.08);
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease,
+        transform 0.9s ease;
+
+}
+
+
+.guest-visible {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        scale(1);
+
+}
+
+
+/* =========================================
+   GUEST GLOW
+========================================= */
+
+.guest-glow {
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,183,105,0.25),
+            transparent 68%
+        );
+
+    filter:
+        blur(20px);
+
+}
+
+
+/* =========================================
+   GUEST CARD
+========================================= */
+
+.guest-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 340px;
+
+    padding:
+        42px 27px 35px;
+
+    text-align:
+        center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(245,159,111,0.18),
+            rgba(73,32,55,0.82)
+        );
+
+    border:
+        1px solid
+        rgba(244,194,126,0.6);
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(0,0,0,0.35);
+
+    border-radius:
+        130px 130px 18px 18px;
+
+}
+
+
+/* =========================================
+   GUEST DECORATION
+========================================= */
+
+.guest-decoration {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+}
+
+
+.guest-decoration span {
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #e8b66d
+        );
+
+}
+
+
+.guest-decoration span:nth-child(3) {
+
+    background:
+        linear-gradient(
+            90deg,
+            #e8b66d,
+            transparent
+        );
+
+}
+
+
+.guest-decoration b {
+
+    color:
+        #f6c67f;
+
+}
+
+
+/* =========================================
+   GUEST TEXT
+========================================= */
+
+.guest-small-title {
+
+    margin-top:
+        22px;
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        3px;
+
+    color:
+        #e4b77a;
+
+}
+
+
+.guest-card h1 {
+
+    margin-top:
+        9px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        42px;
+
+    font-weight:
+        500;
+
+    color:
+        #fff0d0;
+
+}
+
+
+.guest-question {
+
+    margin-top:
+        2px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        22px;
+
+    color:
+        #f3c98b;
+
+}
+
+
+.guest-description {
+
+    margin:
+        13px auto 25px;
+
+    max-width:
+        230px;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+
+    font-weight:
+        300;
+
+    color:
+        #d8c0a8;
+
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-wrapper {
+
+    position:
+        relative;
+
+}
+
+
+.input-wrapper input {
+
+    width:
+        100%;
+
+    height:
+        48px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid
+        rgba(239,190,117,0.55);
+
+    border-radius:
+        30px;
+
+    outline:
+        none;
+
+    background:
+        rgba(33,17,30,0.55);
+
+    color:
+        #fff0d1;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size:
+        12px;
+
+    text-align:
+        center;
+
+    transition:
+        border 0.3s,
+        box-shadow 0.3s;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color:
+        #bfa795;
+
+}
+
+
+.input-wrapper input:focus {
+
+    border-color:
+        #f2c37c;
+
+    box-shadow:
+        0 0 18px
+        rgba(242,195,124,0.14);
+
+}
+
+
+/* =========================================
+   ENTER WEDDING BUTTON
+========================================= */
+
+.enter-wedding-button {
+
+    width:
+        100%;
+
+    height:
+        47px;
+
+    margin-top:
+        12px;
+
+    border:
+        none;
+
+    border-radius:
+        28px;
+
+    cursor:
+        pointer;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #e17b65,
+            #e7a15e,
+            #e17b65
+        );
+
+    color:
+        #3d1d29;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size:
+        8px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        1.5px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.2);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+
+}
+
+
+.enter-wedding-button:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+.enter-wedding-button b {
+
+    font-size:
+        14px;
+
+    font-weight:
+        400;
+
+}
+
+
+/* =========================================
+   BOTTOM GUEST DECORATION
+========================================= */
+
+.guest-bottom-decoration {
+
+    margin-top:
+        22px;
+
+    color:
+        #d59c62;
+
+    font-size:
+        9px;
+
+}
+
+
+/* =========================================
+   PAGE TRANSITION
+========================================= */
+
+.page-transition {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        500;
+
+    pointer-events:
+        none;
+
+    opacity:
+        0;
+
+    background:
+        #271622;
+
+}
+
+
+.transition-circle {
+
+    position:
+        absolute;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    border-radius:
+        50%;
+
+    background:
+        #f3c27d;
+
+    box-shadow:
+        0 0 100px
+        50px
+        rgba(243,194,125,0.25);
+
+}
+
+
+.transition-active {
+
+    opacity:
+        1;
+
+}
+
+
+.transition-active
+.transition-circle {
+
+    animation:
+        expandTransition 1s ease forwards;
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes backgroundPulse {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-50%)
+            scale(1);
+
+        opacity:
+            0.7;
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            scale(1.12);
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(15deg);
+
+    }
+
+}
+
+
+@keyframes peacockFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+
+    }
+
+}
+
+
+@keyframes rays {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes glow {
+
+    0%,
+    100% {
+
+        opacity:
+            0.5;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.9);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.15);
+
+    }
+
+}
+
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.15);
+
+    }
+
+}
+
+
+@keyframes revealDown {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateX(-50%)
+            translateY(-15px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes expandTransition {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            scale(30);
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-height: 700px) {
+
+    .jaipur-palace {
+
+        height:
+            67%;
+
+        min-height:
+            400px;
+
+    }
+
+
+    .royal-header {
+
+        top:
+            2.5%;
+
+    }
+
+
+    .royal-footer {
+
+        bottom:
+            1%;
+
+    }
+
+
+    .open-door-button {
+
+        width:
+            90px;
+
+        height:
+            90px;
+
+    }
+
+}
+
+
+/* =========================================
+   PHONE PREVIEW ON DESKTOP
+========================================= */
+
+@media (min-width: 600px) {
+
+    body {
+
+        display:
+            flex;
+
+        justify-content:
+            center;
+
+        background:
+            #130b12;
+
+    }
+
+
+    .jaipur-page {
+
+        width:
+            390px;
+
+        max-width:
+            390px;
+
+    }
+
+}
